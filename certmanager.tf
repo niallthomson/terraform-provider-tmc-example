@@ -46,6 +46,7 @@ data "template_file" "issuers" {
 
   vars {
     accessKey = "${aws_iam_access_key.key.id}"
+    region    = "${var.region}"
     acmeEmail = "${var.acme_email}"
   }
 }

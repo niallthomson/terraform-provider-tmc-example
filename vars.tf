@@ -6,9 +6,8 @@ variable "acme_email" {
 
 }
 
-variable "zones" {
-  type = "list"
-  default = ["us-east-2", "us-west-2", "eu-west-1"]
+variable "region" {
+
 }
 
 variable "azs" {
