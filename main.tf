@@ -1,5 +1,5 @@
 provider "tmc" {
-  api_key = "${var.key}"
+  api_key = "${var.tmc_key}"
 }
 
 resource "random_id" "id" {
