@@ -6,3 +6,5 @@ Currently behavior is:
 - Provision a TMC cluster in AWS
 - Initialize Helm
 - Install Nginx Ingress
+- Install Cert Manager
+- Install External DNS
