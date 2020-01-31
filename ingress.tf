@@ -21,7 +21,3 @@ data "kubernetes_service" "nginx_ingress" {
     namespace = "${helm_release.nginx_ingress.namespace}"
   }
 }
-
-output "nginx_ingress_endpoint" {
-  value = "${data.kubernetes_service.nginx_ingress.load_balancer_ingress.0.hostname}"
-}
