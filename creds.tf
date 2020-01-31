@@ -1,3 +1,0 @@
-variable "tmc_key" {
-
-}

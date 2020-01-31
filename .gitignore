@@ -2,3 +2,5 @@ terraform.tfstate*
 .terraform
 terraform.d
 terraform.tfvars
+kubeconfig
+test.yml

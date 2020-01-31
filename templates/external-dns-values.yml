@@ -1,0 +1,14 @@
+rbac:
+  create: true
+  
+provider: aws
+
+aws:
+  credentials:
+    accessKey: ${accessKey}
+    secretKey: ${secretKey}
+  zoneType: public
+
+interval: "1m"
+
+policy: sync
