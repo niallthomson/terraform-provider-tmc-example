@@ -3,5 +3,14 @@ output "nginx_ingress_endpoint" {
 }
 
 output "kubeconfig" {
-  value = "${data.tmc_kubeconfig.kubeconfig.content}"
+  value     = "${data.tmc_kubeconfig.kubeconfig.content}"
+  sensitive = true
+}
+
+output "rds_cluster_id" {
+  value = "${aws_rds_cluster.cluster.id}"
+}
+
+output "rds_endpoint" {
+  value = "${aws_rds_cluster_instance.instance.endpoint}"
 }

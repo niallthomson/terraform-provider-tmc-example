@@ -11,5 +11,6 @@ Currently behavior is:
 - Add Route53 entries for weighted routing between clusters
 
 TODO:
+- Install some application for OOTB demo
 - Switch to Contour for ingress
 - Add multi-region RDS cluster

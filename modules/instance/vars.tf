@@ -1,21 +1,17 @@
-variable "id" {
-  
-}
+variable "id" {}
 
-variable "tmc_cluster_group" {
+variable "tmc_cluster_group" {}
 
-}
+variable "acme_email" {}
 
-variable "acme_email" {
+variable "root_hosted_zone_id" {}
 
-}
+variable "region" {}
 
-variable "root_hosted_zone_id" {
+variable "rds_global_cluster_id" {}
 
-}
-
-variable "region" {
-
+variable "rds_blocker" {
+  default = ""
 }
 
 variable "wavefront_token" {
