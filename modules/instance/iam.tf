@@ -1,5 +1,5 @@
 resource "aws_iam_user" "user" {
-  name = "bootcamp-user-${random_id.id.hex}"
+  name = "bootcamp-user-${var.id}-${local.region_short}"
 }
 
 resource "aws_iam_access_key" "key" {
@@ -7,7 +7,7 @@ resource "aws_iam_access_key" "key" {
 }
 
 resource "aws_iam_user_policy" "policy" {
-  name = "bootcamp-policy-${random_id.id.hex}"
+  name = "bootcamp-policy-${var.id}-${local.region_short}"
   user = "${aws_iam_user.user.name}"
 
   policy = <<EOF

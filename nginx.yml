@@ -12,9 +12,16 @@ spec:
   tls:
   - hosts:
     - "nginx.aws.paasify.org"
-    secretName: example-wildcard
+    - "nginx.usw2.aws.paasify.org"
+    secretName: nginx-certificate
   rules:
   - host: nginx.aws.paasify.org
+    http:
+      paths:
+      - backend:
+          serviceName: nginx
+          servicePort: 80
+  - host: nginx.usw2.aws.paasify.org
     http:
       paths:
       - backend:

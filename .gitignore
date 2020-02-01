@@ -2,5 +2,6 @@ terraform.tfstate*
 .terraform
 terraform.d
 terraform.tfvars
+.terraform.tfstate.lock.info
 kubeconfig
 test.yml

@@ -1,7 +1,13 @@
+resource "kubernetes_namespace" "certmanager" {
+  metadata {
+    name      = "certmanager"
+  }
+}
+
 resource "kubernetes_secret" "iam_secret" {
   metadata {
     name      = "aws-iam"
-    namespace = "certmanager"
+    namespace = "${kubernetes_namespace.certmanager.metadata.0.name}"
   }
 
   data = {
@@ -13,6 +19,11 @@ resource "kubernetes_secret" "iam_secret" {
 }
 
 resource "kubernetes_job" "certmanager_prereq" {
+
+  depends_on = [
+    "kubernetes_namespace.certmanager"
+  ]
+
   metadata {
     name      = "certmanager-prereq"
     namespace = "kube-system"
@@ -116,7 +127,7 @@ resource "helm_release" "certmanager" {
   ]
 
   name       = "certmanager"
-  namespace  = "certmanager"
+  namespace  = "${kubernetes_namespace.certmanager.metadata.0.name}"
   repository = "${helm_repository.jetstack.name}"
   chart      = "cert-manager"
   version    = "v0.13.0"
