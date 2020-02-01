@@ -4,6 +4,14 @@ variable "acme_email" {}
 
 variable "root_hosted_zone_id" {}
 
+variable "wavefront_token" {
+  default = ""
+}
+
+variable "wavefront_url" {
+  default = ""
+}
+
 provider "tmc" {
   api_key = "${var.tmc_key}"
 }

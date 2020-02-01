@@ -18,6 +18,14 @@ variable "region" {
 
 }
 
+variable "wavefront_token" {
+  default = ""
+}
+
+variable "wavefront_url" {
+  default = ""
+}
+
 variable "azs" {
   type = "map"
 
