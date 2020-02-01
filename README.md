@@ -3,8 +3,13 @@
 This repository contains example Terraform configuration leveraging the VMware Tanzu Mission Control Terraform Provider.
 
 Currently behavior is:
-- Provision a TMC cluster in AWS
+- Provision TMC clusters in two separate AWS regions
 - Initialize Helm
 - Install Nginx Ingress
 - Install Cert Manager
-- Install External DNS
+- Install Wavefront Agent
+- Add Route53 entries for weighted routing between clusters
+
+TODO:
+- Switch to Contour for ingress
+- Add multi-region RDS cluster
