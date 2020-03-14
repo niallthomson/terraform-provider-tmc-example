@@ -1,5 +1,7 @@
 # Tanzu Mission Control Terraform Provider Example 
 
+Note: the implementation of the `tmc` Terraform provider used in this sample is currently not released, pending understanding licensing etc.
+
 This repository contains example Terraform configuration leveraging the VMware Tanzu Mission Control Terraform Provider.
 
 Currently behavior is:
